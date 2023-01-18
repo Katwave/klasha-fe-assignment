@@ -1,0 +1,46 @@
+.header {
+  padding: 15px 30px 15px 30px;
+  @include fc(row);
+  justify-content: flex-end;
+  border-bottom: 1px solid #eee;
+
+  .ham-menu {
+    flex: 1;
+    align-self: flex-start;
+    @include fc(row);
+    justify-content: flex-start;
+    display: none;
+
+    .openNav {
+      display: inline-block;
+      //   display: flex;
+      cursor: pointer;
+      .bar1,
+      .bar2,
+      .bar3 {
+        background: #000;
+        width: 35px;
+        height: 5px;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      display: flex;
+    }
+  }
+
+  p {
+    margin-right: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    i {
+      font-size: 24px;
+      margin-left: 5px;
+    }
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}

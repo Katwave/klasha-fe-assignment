@@ -1,0 +1,41 @@
+// Vars
+$mainCol: #ef2c5a;
+
+// Imports
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+// Mixins
+@mixin fc($d) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $d;
+}
+
+body {
+  width: 100%;
+  display: flex;
+
+  @import "./side-menu";
+
+  // Content
+  .content-section {
+    width: 80%;
+    @media screen and (max-width: 1200px) {
+      width: 100%;
+    }
+
+    @import "./header";
+
+    @import "./stats";
+
+    // Transactions
+    @import "./trans";
+  }
+}

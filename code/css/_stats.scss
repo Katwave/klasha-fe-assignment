@@ -1,0 +1,214 @@
+.stats {
+  padding: 30px;
+
+  .heading {
+    @include fc(row);
+    justify-content: flex-start;
+    h3 {
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+
+  .sales-heading {
+    width: 66%;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    margin-top: 20px;
+    @media screen and (max-width: 1200px) {
+      width: 100%;
+    }
+
+    a {
+      color: #222;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 10px;
+      padding: 0px 0px 0px 10px;
+    }
+    .first {
+      border-left: 1px solid #ddd;
+    }
+
+    button {
+      outline: none;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px;
+      color: #000;
+      border: #0a0a0a solid 1px;
+      border-radius: 10px;
+      background-color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      i {
+        margin-left: 6px;
+      }
+    }
+    .active {
+      color: $mainCol;
+    }
+
+    select {
+      flex: 1;
+      color: #565c69;
+      border: #f4f4f4 solid 1px;
+      border-radius: 10px;
+      background-color: #fff;
+      padding: 10px;
+      font-size: 16px;
+    }
+  }
+
+  .cards-cont {
+    width: 100%;
+    @include fc(row);
+    justify-content: flex-start;
+
+    @media screen and (max-width: 1200px) {
+      @include fc(column);
+    }
+
+    .card {
+      margin: 15px;
+      margin-left: 0px;
+      border: 1px solid #222;
+      border-radius: 10px;
+      padding: 15px;
+      @include fc(column);
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      // width: 350px;
+      position: relative;
+
+      .graph {
+        width: 100%;
+        height: 80%;
+        background-color: transparent;
+        position: relative;
+
+        svg {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+        }
+        .left-vec {
+          position: absolute;
+          top: 0;
+          background-color: black;
+        }
+      }
+
+      p {
+        font-size: 14px;
+        color: #000;
+      }
+      h4 {
+        font-size: 20px;
+        margin-top: 5px;
+      }
+
+      .top-panel {
+        width: 100%;
+        font-size: 11px;
+
+        .num-line {
+          @include fc(row);
+          margin-top: 45px;
+          justify-content: flex-start;
+
+          &:first-child {
+            margin-top: 0px;
+          }
+        }
+        .line {
+          width: 90%;
+          background-color: #ddd;
+          height: 1px;
+          margin-left: 10px;
+        }
+      }
+
+      .bottom-panel {
+        width: 100%;
+        @include fc(row);
+        align-items: space-evenly;
+        justify-content: space-evenly;
+
+        p {
+          font-size: 11px;
+        }
+      }
+
+      .sales-graph {
+        position: absolute;
+        top: 30%;
+        // left: 20%;
+        width: 100%;
+
+        // height: 100px;
+        // background-color: blue;
+
+        svg {
+          width: 100%;
+          height: 100px;
+        }
+      }
+    }
+
+    .dark {
+      background-color: #000;
+      p {
+        color: #fff;
+      }
+      h4 {
+        color: #fff;
+      }
+    }
+
+    .card-small {
+      width: 350px;
+      height: 250px;
+    }
+
+    .sales-card {
+      width: 80%;
+      height: 250px;
+      #myChart {
+        width: 100%;
+        flex: 1;
+        display: none;
+      }
+    }
+
+    .wire-card {
+      background-color: $mainCol;
+      height: 250px;
+      padding: 20px;
+      @include fc(column);
+      border-radius: 10px;
+
+      .title {
+        flex: 1;
+
+        h4 {
+          font-size: 20px;
+          font-weight: 500;
+          color: #fff;
+        }
+      }
+      button {
+        align-self: flex-start;
+        border: none;
+        outline: none;
+        background-color: #222;
+        color: #fff;
+        padding: 20px 30px;
+        border-radius: 99px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
+}

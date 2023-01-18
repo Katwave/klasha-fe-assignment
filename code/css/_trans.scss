@@ -1,0 +1,138 @@
+.trans {
+  .table-cont {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+
+    .header {
+      padding: 20px;
+      @include fc(row);
+      justify-content: flex-start;
+      h2 {
+        text-align: left;
+        font-size: 20px;
+
+        font-weight: bold;
+      }
+    }
+
+    .header-nav {
+      @include fc(row);
+      .search {
+        padding: 20px;
+        flex: 1;
+        border-bottom: 1px solid #ddd;
+        @include fc(row);
+        justify-content: flex-start;
+        // padding: 10px 0px;
+
+        .search-bar {
+          position: relative;
+          input {
+            width: 200px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            outline: none;
+          }
+          p {
+            position: absolute;
+            right: 10px;
+            top: 8px;
+            cursor: pointer;
+            i {
+              font-size: 24px;
+            }
+          }
+        }
+      }
+
+      .btn {
+        padding: 20px;
+        border-bottom: 1px solid #ddd;
+        button {
+          border: 1px solid #000;
+          cursor: pointer;
+          font-size: 16px;
+          outline: none;
+          padding: 10px 20px;
+          background-color: #fff;
+          color: #222;
+          border-radius: 10px;
+          margin-right: 10px;
+          &:last-child {
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+
+    .data {
+      @include fc(column);
+      align-items: flex-start;
+      width: 100%;
+
+      .data-row {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        &:hover {
+          background-color: #eee;
+          cursor: pointer;
+        }
+        &:first-child {
+          &:hover {
+            background-color: #fff;
+            cursor: default;
+          }
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+        p {
+          text-align: left;
+          color: #222;
+          font-size: 16px;
+        }
+
+        .heading {
+          font-weight: bold;
+          color: #777;
+        }
+      }
+    }
+
+    .pagination {
+      @include fc(row);
+      justify-content: flex-end;
+      border-top: 1px solid #ddd;
+      padding: 20px;
+
+      .nums {
+        @include fc(row);
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 5px;
+        a {
+          text-decoration: none;
+          @include fc(row);
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          margin-right: 20px;
+          color: #777;
+          font-weight: bold;
+          cursor: pointer;
+          &:hover {
+            background-color: #ddd;
+            color: #222;
+          }
+        }
+      }
+    }
+  }
+}
